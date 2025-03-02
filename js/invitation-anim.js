@@ -12,7 +12,6 @@ window.onload = () => {
         currentInvitationState = clamp(MAX_DEGREES * normalizedScrollPosition * ACCELERATION, 0, MAX_DEGREES);
         document.documentElement.style.setProperty(CSS_VARIABLES.INVITATION_STATE, `${currentInvitationState * -1}${DEGREES}`);
 
-
         if (normalizedScrollPosition <= 0.5) {
             currentInvitationPosition = clamp(normalizedScrollPosition * ACCELERATION, 0, 1);
         } else {
