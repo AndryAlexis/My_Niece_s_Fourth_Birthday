@@ -47,7 +47,6 @@ main {
 
 #invitation {
     width: 500px;
-    /* margin: 20px 0 20px 0; */
     height: 600px;
     /* max-height: calc(100vh - 40px); */
     perspective: 1000px;
@@ -58,7 +57,7 @@ main {
     left: 50%;
 
     translate: var(--invitation-position);
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% - 9px), -50%);
     pointer-events: none;
 
     &>div {
@@ -211,6 +210,139 @@ main {
 
                 &:hover {
                     background-color: rgb(255, 0, 43)
+                }
+            }
+        }
+    }
+}
+
+@media (width < 500px) {
+    #invitation {
+        width: 375px;
+        height: 500px;
+    
+        &>div {
+            &#cover-page {            
+                &>section {
+                    padding: 5px 0 5px 0;
+    
+                    &:first-child {
+                        rotate: 0 1 0 180deg;
+                        padding: 10px 0;
+                        font-family: 'lucy';
+                        background-image: url('../src/images/background-1.webp');
+    
+                        & h2 {
+                            /* position: absolute; */
+                            bottom: 50px;
+                            font-size: 3rem;
+                        }
+    
+                        & figure {
+                            width: 360px;
+                            height: 480px;
+                            border-radius: 10px;
+                            border: 10px solid white;
+                            outline: 1px solid black;
+                            overflow: hidden;
+    
+                            &> img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+            
+                    &:last-child {
+                        font-size: 2.3rem;
+                        text-align: center;
+                        line-height: .8;
+    
+                        display: grid;
+                        place-items: center;
+                        background-image: url('../src/images/background-1.webp');
+    
+                        & figure {
+                            width: 300px;
+                            height: 300px;
+                            border-radius: 65% 35% 60% 40% / 50% 50% 50% 50%;
+                            border: 10px solid white;
+                            outline: 1px solid black;
+                            overflow: hidden;
+    
+                            &> img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &#content {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                box-shadow: 
+                inset 0px 2px 0px rgb(70, 70, 70), 
+                inset -2px -2px 0px rgb(70, 70, 70);
+                background-color: var(--main-color); 
+                padding: 20px;      
+                background-image: url('../src/images/background-1.webp');
+                
+                /* font-family: 'lucy'; */
+                font-size: 3rem;
+                text-align: center;
+                line-height: 1;
+    
+                & span {
+                    font-family: 'spacetime';
+                    font-size: 2rem;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+    
+                & time {
+                    font-family: 'spacetime';
+                    font-size: 2rem;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+    
+                & figure {
+                    outline: 1px solid black;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 200px;
+    
+                    &> img {
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+    
+                & #confirm {
+                    pointer-events: all;
+                    background-color: rgb(255, 40, 76);
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
+                    padding: 10px;
+                    font-size: 2rem;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    font-family: 'sans-serif';
+    
+                    &:hover {
+                        background-color: rgb(255, 0, 43)
+                    }
                 }
             }
         }
