@@ -219,7 +219,7 @@ main {
 #do-scroll {
     width: 100%;
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
     left: 50%;
     color: black;
     z-index: 999;
@@ -231,6 +231,12 @@ main {
     text-align: center;
     padding: 20px 10px;
     font-weight: bold;
+
+    animation-name: scale;
+    animation-timing-function: ease;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
 
 .is-invisible {
@@ -268,6 +274,18 @@ main {
         }
     }
     #do-scroll {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+@keyframes scale {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.2;
+    }
+    100% {
+        scale: 1;
     }
 }
