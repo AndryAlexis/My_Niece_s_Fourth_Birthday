@@ -196,6 +196,7 @@ main {
             }
 
             & #confirm {
+                transition: opacity .3s;
                 pointer-events: all;
                 background-color: rgb(255, 40, 76);
                 text-decoration: none;
@@ -237,7 +238,7 @@ main {
 }
 
 .disable {
-    pointer-events: none;
+    pointer-events: none !important;
     opacity: .5;
 }
 
