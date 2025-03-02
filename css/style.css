@@ -232,6 +232,15 @@ main {
     font-weight: bold;
 }
 
+.is-invisible {
+    display: none;
+}
+
+.disable {
+    pointer-events: none;
+    opacity: .5;
+}
+
 @media (width < 500px) {
     #invitation {
         width: 375px;
