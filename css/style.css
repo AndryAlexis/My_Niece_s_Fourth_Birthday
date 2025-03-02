@@ -233,14 +233,12 @@ main {
                         background-image: url('../src/images/background-1.webp');
     
                         & h2 {
-                            /* position: absolute; */
-                            bottom: 50px;
-                            font-size: 3rem;
+                            font-size: 2.3rem;
                         }
     
                         & figure {
-                            width: 360px;
-                            height: 480px;
+                            width: 250px;
+                            height: 350px;
                             border-radius: 10px;
                             border: 10px solid white;
                             outline: 1px solid black;
