@@ -227,10 +227,6 @@ main {
                     padding: 5px 0 5px 0;
     
                     &:first-child {
-                        rotate: 0 1 0 180deg;
-                        padding: 10px 0;
-                        font-family: 'lucy';
-                        background-image: url('../src/images/background-1.webp');
     
                         & h2 {
                             font-size: 2.3rem;
@@ -239,17 +235,6 @@ main {
                         & figure {
                             width: 250px;
                             height: 350px;
-                            border-radius: 10px;
-                            border: 10px solid white;
-                            outline: 1px solid black;
-                            overflow: hidden;
-    
-                            &> img {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                border-radius: 10px;
-                            }
                         }
                     }
             
