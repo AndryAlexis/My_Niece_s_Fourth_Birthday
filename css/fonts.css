@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'lucy';
+    src: url('../src/fonts/lucy-said-ok-personal-use.italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'spacetime';
+    src: url('../src/fonts/spacetime-regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+</head>
+<body>
+    <main>
+        <div id="particles-js"></div>
+        <div id="wrapper">
+            <div id="invitation">
+                <div id="content">
+                    <p>
+                        <span>
+                            El dia
+                        </span>
+                        <br>
+                        <time datetime="2025-03-22">22 de Marzo del 2025</time>
+                        <br>
+                        <span>
+                            a las
+                        </span>
+                        <br>
+                        <time datetime="">16:00</time>
+                        <span>
+                            En el
+                        </span>
+                    </p>
+                    <figure>
+                        <img src="./src/images/kpc.jpg" alt="KPC Restaurante" width="500" height="200">
+                    </figure>
+                    <a aria-disabled="true" id="confirm" target="_blank" href="https://docs.google.com/forms/d/1HgZDl6P9AALKM2AymYvYtrZXTqTqSBpVX6f2S4p9h2k/viewform?edit_requested=true">
+                        Confirmar Asistencia
+                    </a>
+                </div>
+                <div id="cover-page">
+                    <section>
+                        <figure>
+                            <img loading="eager" src="./src/gifs/AlmaQuiereMarchaMarcha_COMPRESS.webp" width="360" height="480" alt="Vídeo Alma bailando">
+                        </figure>
+                        <h2>¡Ven y pásatelo bien conmigo!</h2>
+                    </section>
+                    <section>
+                        <h1>¡Has sido invitado a mi cumpleaños!</h1>
+                        <figure>
+                            <img loading="eager" src="./src/images/SmilingAlma.jpg" width="400" height="400" alt="Alma sonriente">
+                        </figure>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        particlesJS.load('particles-js', './assets/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+</body>
+</html>
