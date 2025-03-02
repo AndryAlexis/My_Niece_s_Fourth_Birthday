@@ -231,6 +231,7 @@ main {
     text-align: center;
     padding: 20px 10px;
     font-weight: bold;
+    pointer-events: none;
 
     animation-name: scale;
     animation-timing-function: ease;
