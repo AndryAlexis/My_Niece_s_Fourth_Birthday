@@ -2,22 +2,26 @@ import { clamp } from './utils/helper.js';
 import { CSS_VARIABLES, MAX_DEGREES, ACCELERATION, SCROLL_EVENT, MAIN_TAG, DEGREES, PERCENTAGE } from './utils/constants.js';
 
 window.onload = () => {
-    invitationAnim();
-    doScroll();
-    confirmButtom();
+    invitationAnim(); // Initialize invitation animation
+    doScrollMessageBehavior(); // Initialize scroll behavior
+    confirmButtonBehavior(); // Initialize confirm button behavior
 }
 
 const invitationAnim = () => {
-    let currentInvitationState = 0
-    let currentInvitationPosition = 0
+    let currentInvitationState = 0;
+    let currentInvitationPosition = 0;
     
     const main = document.querySelector(MAIN_TAG);
     
     main.addEventListener(SCROLL_EVENT, () => {
+        // Calculate normalized scroll position
         const normalizedScrollPosition = main.scrollTop / (main.scrollHeight - main.clientHeight);
+        
+        // Update invitation state based on scroll position
         currentInvitationState = clamp(MAX_DEGREES * normalizedScrollPosition * ACCELERATION, 0, MAX_DEGREES);
         document.documentElement.style.setProperty(CSS_VARIABLES.INVITATION_STATE, `${currentInvitationState * -1}${DEGREES}`);
     
+        // Update invitation position based on scroll position
         if (normalizedScrollPosition <= 0.5) {
             currentInvitationPosition = clamp(normalizedScrollPosition * ACCELERATION, 0, 1);
         } else {
@@ -28,34 +32,42 @@ const invitationAnim = () => {
     });
 }
 
-const doScroll = () => {
+const doScrollMessageBehavior = () => {
+    const DO_SCROLL_ID = '#do-scroll';
+    const IS_INVISIBLE_CLASS = 'is-invisible';
+    const TRIGGER_POINT = 0.05;
+
     const main = document.querySelector(MAIN_TAG);
-    const doScrollElement = document.querySelector('#do-scroll');
+    const doScrollElement = document.querySelector(DO_SCROLL_ID);
     
     main.addEventListener(SCROLL_EVENT, () => {
+        // Calculate normalized scroll position
         const normalizedScrollPosition = main.scrollTop / (main.scrollHeight - main.clientHeight);
     
-        if (normalizedScrollPosition > 0.05) {
-            doScrollElement.classList.add('is-invisible');
+        // Hide 'do-scroll' element if scrolled past a certain point
+        if (normalizedScrollPosition > TRIGGER_POINT) {
+            doScrollElement.classList.add(IS_INVISIBLE_CLASS);
         }
-    
-        console.log('Scroll position:', normalizedScrollPosition);
     });
 }
 
-const confirmButtom = () => {
+const confirmButtonBehavior = () => {
+    const CONFIRM_ID = '#confirm';
+    const DISABLE_CLASS = 'disable';
+    const TRIGGER_POINT = 0.98;
+
     const main = document.querySelector(MAIN_TAG);
-    const doScrollElement = document.querySelector('#confirm');
+    const doScrollElement = document.querySelector(CONFIRM_ID);
     
     main.addEventListener(SCROLL_EVENT, () => {
+        // Calculate normalized scroll position
         const normalizedScrollPosition = main.scrollTop / (main.scrollHeight - main.clientHeight);
     
-        if (normalizedScrollPosition <= 0.95) {
-            doScrollElement.classList.add('disable');
+        // Disable 'confirm' button if not scrolled to the bottom
+        if (normalizedScrollPosition <= TRIGGER_POINT) {
+            doScrollElement.classList.add(DISABLE_CLASS);
         } else {
-            doScrollElement.classList.remove('disable');
+            doScrollElement.classList.remove(DISABLE_CLASS);
         }
-    
-        console.log('Scroll position:', normalizedScrollPosition);
     });
 }
