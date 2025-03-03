@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 51,
+      "value": 20,
       "density": {
         "enable": false,
         "value_area": 180
@@ -20,7 +20,7 @@
         "nb_sides": 3
       },
       "image": {
-        "src": "https://purepng.com/public/uploads/large/balloons-c9p.png",
+        "src": "./src/images/balloons.webp",
         "width": 2300,
         "height": 1910
       }
