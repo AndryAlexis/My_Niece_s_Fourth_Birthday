@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fonts.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
 </head>
 <body>
     <main>
@@ -47,8 +48,9 @@
                 </div>
                 <div id="cover-page">
                     <section>
-                        <video width="320" height="240" autoplay loop muted>
-                            <source src="./src/gifs/Dancingalam.webm" type="video/webm">
+                        <video class="lazyload" width="320" height="240" autoplay loop muted playsinline poster="./src/images/SmilingAlma_5.jpg">
+                            <source data-src="./src/gifs/Dancingalam.mp4" type="video/mp4">
+                            <source data-src="./src/gifs/Dancingalam.webm" type="video/webm">
                             Your browser does not support the video tag.
                         </video>
                         <h2>¡Ven y pásatelo bien conmigo!</h2>
