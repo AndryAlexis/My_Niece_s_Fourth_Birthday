@@ -239,7 +239,7 @@ main {
 }
 
 .enable {
-    pointer-events: all;
+    pointer-events: all !important;
     touch-action: auto;
     opacity: 1 !important;
 }
