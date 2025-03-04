@@ -53,7 +53,7 @@ const doScrollMessageBehavior = () => {
 
 const confirmButtonBehavior = () => {
     const CONFIRM_ID = '#confirm';
-    const DISABLE_CLASS = 'disable';
+    const ENABLE_CLASS = 'enable';
     const TRIGGER_POINT = 0.98;
 
     const main = document.querySelector(MAIN_TAG);
@@ -64,10 +64,10 @@ const confirmButtonBehavior = () => {
         const normalizedScrollPosition = main.scrollTop / (main.scrollHeight - main.clientHeight);
     
         // Disable 'confirm' button if not scrolled to the bottom
-        if (normalizedScrollPosition <= TRIGGER_POINT) {
-            doScrollElement.classList.add(DISABLE_CLASS);
+        if (normalizedScrollPosition >= TRIGGER_POINT) {
+            doScrollElement.classList.add(ENABLE_CLASS);
         } else {
-            doScrollElement.classList.remove(DISABLE_CLASS);
+            doScrollElement.classList.remove(ENABLE_CLASS);
         }
     });
 }

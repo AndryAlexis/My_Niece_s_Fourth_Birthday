@@ -188,8 +188,9 @@ main {
 
             & #confirm {
                 transition: opacity .3s;
-                pointer-events: all;
+                pointer-events: none;
                 touch-action: auto;
+                opacity: .5;
                 background-color: rgb(30, 172, 49);
                 text-decoration: none;
                 color: white;
@@ -237,10 +238,10 @@ main {
     display: none;
 }
 
-.disable {
-    pointer-events: none !important;
-    touch-action: none;
-    opacity: .5;
+.enable {
+    pointer-events: all;
+    touch-action: auto;
+    opacity: 1 !important;
 }
 
 @media (width < 31.25rem) {
