@@ -95,8 +95,6 @@ main {
                     padding: 0.625rem 0;
                     font-family: 'lucy', sans-serif;
                     background-image: url('../src/images/background-1.webp');
-                    background-size: cover;
-                    background-position: center;
 
                     & h2 {
                         bottom: 3.125rem;
@@ -123,12 +121,13 @@ main {
                     display: grid;
                     place-items: center;
                     background-image: url('../src/images/background-1.webp');
-                    background-size: cover;
-                    background-position: center;
 
                     & figure {
                         width: 18.75rem;
                         height: 18.75rem;
+                        border-radius: 65% 35% 60% 40% / 50% 50% 50% 50%;
+                        border: 0.625rem solid white;
+                        outline: 0.0625rem solid black;
                         overflow: hidden;
 
                         &> img {
@@ -152,8 +151,7 @@ main {
             background-color: var(--main-color); 
             padding: 1.25rem;      
             background-image: url('../src/images/background-1.webp');
-            background-size: cover;
-            background-position: center;
+            
             font-size: 3rem;
             text-align: center;
             line-height: 1;
